@@ -4,9 +4,11 @@ import './App.css';
 import { BrowserRouter as Router, Route , Switch } from 'react-router-dom';
 
 import HeaderComponent from './components/HeaderComponent';
-import ListEmployeeComponent from './components/ListEmployeeComponent';
+import ListComponent from './components/ListComponent';
 import FooterComponent from './components/FooterComponent';
-import CreateEmployeeComponent from './components/CreateEmployeeComponent';
+import CreateComponent from './components/CreateComponent';
+import UpdateComponent from './components/UpdateComponent';
+import ViewComponent from './components/ViewComponent';
 
 function App() {
   return (
@@ -16,9 +18,11 @@ function App() {
             <HeaderComponent />
               <div className="container">
                 <Switch>
-                  <Route path = "/" exact component = {ListEmployeeComponent}></Route>
-                  <Route path = "/employees" component = {ListEmployeeComponent}></Route>
-                  <Route path = "/add-employee" component = {CreateEmployeeComponent}></Route>
+                  <Route path = "/" exact component = {ListComponent}></Route>
+                  <Route path = "/departures" component = {ListComponent}></Route>
+                  <Route path = "/add-departure" component = {CreateComponent}></Route>
+                  <Route path = "/update-departure/:departureId" component = {UpdateComponent}></Route>
+                  <Route path = "/view-departure/:departureId" component = {ViewComponent}></Route>
                 
                 </Switch>
                 
